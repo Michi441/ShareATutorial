@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @tutorial.title %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @tutorial.description %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @tutorial.user %>
+</p>
+
+<p>
+  <strong>Link:</strong>
+  <%= @tutorial.link %>
+</p>
+
+<p>
+  <strong>Image link:</strong>
+  <%= @tutorial.image_link %>
+</p>
+
+<%= link_to 'Edit', edit_tutorial_path(@tutorial) %> |
+<%= link_to 'Back', tutorials_path %>

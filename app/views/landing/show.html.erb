@@ -1,0 +1,43 @@
+
+
+
+<div class="container">
+
+    <div class="d-flex flex-row justify-content-center">
+
+        <div class="col-md-8">
+            <div class="card">
+
+                <div class="card-header">
+
+                    <%= @tutorial.title %>
+                </div>
+
+                <div class="card-body">
+
+                    <p class="lead">
+
+                        <%= @tutorial.description %>
+                    </p>
+
+                    <%= image_tag @tutorial.image_link, style: "width: 100%;" %>
+
+
+
+                    <%= link_to @tutorial.link, @tutorial.link %>
+                    <br><br>
+                    <p>
+
+                        <%= link_to "Back", root_path, class: 'btn btn-outline-secondary' %>
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>

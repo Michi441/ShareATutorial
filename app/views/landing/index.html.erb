@@ -1,0 +1,67 @@
+<html lang="en">
+ 
+  <body>
+   
+
+<main role="main">
+
+  <section class="jumbotron text-center">
+    <div class="container">
+      <h1>ShareATutorial</h1>
+      <p class="lead text-muted">The fastest way to find the best tutorials</p>
+      <p>
+        <a href="#" class="btn btn-primary my-2">Join</a>
+        <a href="#" class="btn btn-secondary my-2">Explore</a>
+      </p>
+    </div>
+  </section>
+
+  <div class="album py-5 bg-light">
+    <div class="container">
+
+      <div class="row">
+
+      <% @tutorials.each do |tutorial| %>
+        <div class="col-md-4">
+          <div class="card mb-4 shadow-sm" style="min-height: 300px;">
+        <div class="d-flex flex-row justify-content-center w-100">
+
+          <%= image_tag tutorial.image_link,  style: "height: 100px; width: 50%;"%>
+
+        </div>  
+
+
+            <div class="card-body">
+              <p class="card-text"><%= tutorial.title %></p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                <%= link_to "View", landing_path(tutorial.id), class: 'btn btn-sm btn-outline-secondary' %>
+                 
+                </div>
+                <small class="text-muted">9 mins</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <% end %>
+
+
+      
+       
+      </div>
+
+      <div class="d-flex flex-row justify-content-center p-3">
+        <%= will_paginate @tutorials, class: 'p-3' %>
+
+
+      </div>
+
+
+    </div>
+  </div>
+
+</main>
+
+</body>
+</html>
